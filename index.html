@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UAHUB — Ukrainian specialists across Spain</title>
+  <meta name="description" content="Find trusted Ukrainian specialists, businesses and events near you in Spain. Book in two minutes, in your language.">
+  <meta property="og:title" content="UAHUB — Your people, wherever you are">
+  <meta property="og:description" content="Redesign concept: a marketplace of Ukrainian services, businesses and events in Spain.">
+  <meta property="og:image" content="img/community.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230057B8'/%3E%3Cpath d='M0 18h32v5a9 9 0 0 1-9 9H9a9 9 0 0 1-9-9z' fill='%23FFD500'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<main>
+  <!-- Hero: one job — search. Real people instead of a globe. -->
+  <section class="hero">
+    <span class="glow blue"></span><span class="glow yellow"></span>
+    <div class="wrap">
+      <div class="hero-people" aria-hidden="true">
+        <div class="float-person" style="left:-10px;top:40px"><img src="img/avatar-1.jpg" alt=""><div><b>Iryna</b><span>Lawyer · Valencia</span></div></div>
+        <div class="float-person" style="left:30px;top:330px"><img src="img/avatar-2.jpg" alt=""><div><b>Mariia</b><span>Nails · Alicante</span></div></div>
+        <div class="float-person" style="right:-10px;top:60px"><img src="img/avatar-4.jpg" alt=""><div><b>Maksym</b><span>Photographer · Alicante</span></div></div>
+        <div class="float-person" style="right:30px;top:340px"><img src="img/avatar-5.jpg" alt=""><div><b>Yulia</b><span>Yoga · Barcelona</span></div></div>
+      </div>
+      <span class="eyebrow"><b>New</b> 4,200 verified Ukrainian businesses</span>
+      <h1 class="display">Your people,<br><span class="serif">wherever</span> you are.</h1>
+      <p class="lead">Find a nail master, a lawyer or a Spanish tutor who speaks your language — and book in two minutes.</p>
+
+      <form class="search" id="hero-search" role="search">
+        <label>
+          <span data-icon="search"></span>
+          <span class="sr-only">What do you need?</span>
+          <input id="hero-q" placeholder="Manicure, lawyer, Spanish tutor…" autocomplete="off">
+        </label>
+        <label>
+          <span data-icon="pin"></span>
+          <span class="sr-only">City</span>
+          <select id="hero-city"></select>
+        </label>
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <div class="popular">
+        <span class="muted">Popular:</span>
+        <a class="chip" href="catalog.html?q=manicure">Manicure</a>
+        <a class="chip" href="catalog.html?q=TIE">TIE renewal</a>
+        <a class="chip" href="catalog.html?q=psychologist">Psychologist</a>
+        <a class="chip" href="catalog.html?cat=learning">Spanish lessons</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><b>4,200</b><span>verified businesses</span></div>
+      <div class="stat"><b>38</b><span>cities in Spain</span></div>
+      <div class="stat"><b>4.8</b><span>average rating</span></div>
+      <div class="stat"><b>2 min</b><span>to book a visit</span></div>
+    </div>
+  </div>
+
+  <!-- Categories: 4 + overflow instead of 8 equal icons -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="h2">What do you need <span class="serif">today?</span></h2>
+        <a class="btn btn-ghost" href="catalog.html">All categories <span data-icon="arrow"></span></a>
+      </div>
+      <div class="bento reveal">
+        <a class="tile photo big" href="catalog.html?cat=beauty">
+          <img src="img/nails-salon.jpg" alt="">
+          <span class="go"><span data-icon="arrow"></span></span>
+          <span class="h3">Beauty &amp; wellness</span><span class="count">1,240 specialists</span>
+        </a>
+        <a class="tile photo" href="catalog.html?cat=legal">
+          <img src="img/lawyer.jpg" alt="" loading="lazy">
+          <span class="go"><span data-icon="arrow"></span></span>
+          <span class="h3">Legal &amp; documents</span><span class="count">NIE, TIE, residency · 380</span>
+        </a>
+        <a class="tile photo" href="catalog.html?cat=learning">
+          <img src="img/tutor.jpg" alt="" loading="lazy">
+          <span class="go"><span data-icon="arrow"></span></span>
+          <span class="h3">Learning</span><span class="count">Spanish, school, music · 520</span>
+        </a>
+        <a class="tile photo" href="#events">
+          <img src="img/community.jpg" alt="" loading="lazy">
+          <span class="go"><span data-icon="arrow"></span></span>
+          <span class="h3">Events &amp; community</span><span class="count">46 this month</span>
+        </a>
+        <a class="tile all" href="catalog.html">
+          <span class="go"><span data-icon="arrow"></span></span>
+          <ul><li>Health</li><li>Home services</li><li>Photo</li><li>Cafés</li><li>Auto</li><li>+12</li></ul>
+          <span class="h3">See all categories</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Near you -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2 class="h2">Top rated in <span class="serif">Alicante</span></h2>
+          <p class="muted">Verified by our team. Real reviews from people who booked here.</p>
+        </div>
+        <div class="chips" id="near-chips">
+          <button class="chip" data-cat="all" aria-pressed="true">All</button>
+          <button class="chip" data-cat="beauty" aria-pressed="false">Beauty</button>
+          <button class="chip" data-cat="health" aria-pressed="false">Health</button>
+          <button class="chip" data-cat="learning" aria-pressed="false">Learning</button>
+          <button class="chip" data-cat="home" aria-pressed="false">Home</button>
+        </div>
+      </div>
+      <div class="grid-cards" id="near-grid"></div>
+      <div style="text-align:center;margin-top:40px">
+        <a class="btn btn-secondary" href="catalog.html?city=Alicante">Show all 124 in Alicante <span data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map teaser -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="overline">Map view</span>
+        <h2 class="h2" style="margin-top:12px">See who's <span class="serif">nearby</span> — at a glance.</h2>
+        <ul class="checks">
+          <li><span data-icon="check"></span>Every specialist on one map, not hidden behind filters</li>
+          <li><span data-icon="check"></span>Distance and price right on the card</li>
+          <li><span data-icon="check"></span>Works across 38 cities — from Bilbao to Málaga</li>
+        </ul>
+        <a class="btn btn-dark" href="catalog.html">Open the map <span data-icon="map"></span></a>
+      </div>
+      <div class="map reveal">
+        <div class="map-canvas" id="teaser-map">
+          <img class="land" src="img/map-spain-white.png" alt="Map of Spain with the number of specialists per city">
+        </div>
+        <div class="map-float">
+          <div class="stack"><img src="img/avatar-2.jpg" alt=""><img src="img/avatar-3.jpg" alt=""><img src="img/avatar-6.jpg" alt=""></div>
+          <span><b>12 specialists</b> within 2 km of you</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured event: one, not a carousel of four -->
+  <section class="section" id="events">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="h2">Happening <span class="serif">this month</span></h2>
+        <a class="btn btn-ghost" href="#events">All 46 events <span data-icon="arrow"></span></a>
+      </div>
+      <div class="event reveal">
+        <img src="img/fair.jpg" alt="Stalls at a Ukrainian makers fair" loading="lazy">
+        <div class="event-card">
+          <span class="date">SAT, NOV 21 · VALENCIA</span>
+          <h3>Ukrainian Makers Fair</h3>
+          <p class="muted" style="margin:0">40 local brands, a kids' zone, workshops and free legal consultations. Plaza del Ayuntamiento, 11:00–19:00.</p>
+          <div class="going">
+            <div class="map-float" style="position:static;padding:0;box-shadow:none"><div class="stack"><img src="img/avatar-1.jpg" alt=""><img src="img/avatar-5.jpg" alt=""><img src="img/avatar-8.jpg" alt=""></div></div>
+            312 people are going
+          </div>
+          <button class="btn btn-primary" id="rsvp" type="button">Save my free spot</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- One strong testimonial -->
+  <section class="section">
+    <figure class="wrap quote reveal">
+      <blockquote>“I opened the map, picked a category — and there they were. Five minutes later I was booked with someone who speaks my language.”</blockquote>
+      <figcaption><img src="img/avatar-3.jpg" alt=""><span><b style="font-weight:500">Olena Hrytsenko</b><br><span class="muted">Moved to Alicante in 2022</span></span></figcaption>
+    </figure>
+  </section>
+
+  <!-- B2B -->
+  <section class="section" id="business">
+    <div class="wrap">
+      <div class="biz reveal">
+        <div>
+          <span class="overline" style="color:rgba(255,255,255,.6)">For business</span>
+          <h2 class="h2" style="margin-top:12px">Your next clients are <span class="serif">already looking.</span></h2>
+          <p class="lead">Get a profile, online booking and a verified badge. Free to start — pay only when you want to be featured.</p>
+          <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+            <a class="btn btn-light" href="#business">List your business free</a>
+            <a class="btn btn-outline-light" href="#business">See pricing</a>
+          </div>
+        </div>
+        <div class="biz-media">
+          <img src="img/cafe.jpg" alt="Interior of a café" loading="lazy">
+          <div class="biz-badge"><span class="muted">Kyiv Café Valencia · this month</span><b>+38 bookings</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  document.getElementById("rsvp").addEventListener("click", (e) => {
+    e.currentTarget.textContent = "You're going ✓";
+    e.currentTarget.classList.replace("btn-primary", "btn-dark");
+  });
+</script>
+</body>
+</html>

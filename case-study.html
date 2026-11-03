@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230057B8'/%3E%3Cpath d='M0 18h32v5a9 9 0 0 1-9 9H9a9 9 0 0 1-9-9z' fill='%23FFD500'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>UAHUB redesign — case study</title>
+  <meta name="description" content="How I redesigned UAHUB, a marketplace of Ukrainian services in Spain: audit, decisions and the reasoning behind each one.">
+</head>
+<body data-page="case">
+<main>
+  <section class="cs-hero">
+    <div class="wrap">
+      <span class="overline">Case study · Product design</span>
+      <h1 class="display" style="margin-top:20px">From a wall of content to <span class="serif">one clear path.</span></h1>
+      <p class="lead" style="max-width:640px;margin-top:28px">UAHUB connects Ukrainians in Spain with specialists, businesses and events from their community. I redesigned the core flow — find, trust, book — and built it as a working prototype.</p>
+      <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="index.html">Open the prototype <span data-icon="arrow"></span></a>
+        <a class="btn btn-secondary" href="https://uahub.world" target="_blank" rel="noopener">See the live site before ↗</a>
+      </div>
+      <div class="cs-meta">
+        <div><span class="muted">Role</span><b>Product designer — audit, UX, UI, prototype</b></div>
+        <div><span class="muted">Scope</span><b>Home → Catalog & map → Profile → Booking</b></div>
+        <div><span class="muted">Platforms</span><b>Desktop & mobile web</b></div>
+        <div><span class="muted">Tools</span><b>Figma · HTML/CSS/JS</b></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><img src="img/community.jpg" alt="Friends in a field making heart shapes with their hands" style="width:100%;height:440px;object-fit:cover;border-radius:28px"></div>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="overline">01 · Context</span>
+      <h2 class="h2">Who it's for, and what they <span class="serif">really</span> need</h2>
+      <div class="prose" style="margin-top:28px">
+        <p>Since 2022 more than 200,000 Ukrainians have settled in Spain. The first months are the same for almost everyone: a TIE appointment, a school for the kids, a doctor, a place to get your nails done without translating every word.</p>
+        <p>People already find these specialists — through Telegram chats, word of mouth and screenshots of business cards. UAHUB's promise is to replace that chaos with one trusted place. So the product has to answer three questions, fast: <b>Who can help me? Can I trust them? How do I book?</b></p>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card"><span class="num">1</span><h3>User goal</h3><p>Find a trusted specialist nearby who speaks Ukrainian, and book without calling or chatting back and forth.</p></div>
+        <div class="cs-card"><span class="num">2</span><h3>Business goal</h3><p>Turn visits into bookings for listed businesses — that's what makes them stay and pay for featured placement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="overline">02 · Audit</span>
+      <h2 class="h2">What was in the <span class="serif">way</span></h2>
+      <p class="lead" style="max-width:640px;margin-top:20px">I reviewed both the live site (uahub.world) and the first design iteration. Every problem below costs either attention or trust.</p>
+      <div class="shots">
+        <figure><div class="frame"><img src="img/before-home.jpg" alt="Original home page design" loading="lazy"></div><figcaption>Before — home: ten sections of equal weight, four carousels.</figcaption></figure>
+        <figure><div class="frame"><img src="img/before-modal.jpg" alt="Original booking modal" loading="lazy"></div><figcaption>Before — booking: a four-step stepper with every step on one screen.</figcaption></figure>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card"><h3>No main scenario</h3><p>Map, events, businesses, promo, reviews, B2B — each block screams equally loud. Nothing tells you where to start.</p></div>
+        <div class="cs-card"><h3>Hero that says nothing</h3><p>A dark globe has no link to Spain or to the task. A paid ad card in the first screen competes with the headline.</p></div>
+        <div class="cs-card"><h3>Choice overload</h3><p>Eight equal categories with glowing 3D icons — low contrast, hard to scan, and every option looks the same.</p></div>
+        <div class="cs-card"><h3>Weak trust signals</h3><p>Cards with long emoji-heavy text bury the things people check first: rating, verification, distance, price.</p></div>
+        <div class="cs-card"><h3>Fake progress</h3><p>The booking stepper shows four steps but asks for everything at once — the steps don't actually guide you.</p></div>
+        <div class="cs-card"><h3>Flag on everything</h3><p>Blue and yellow used at full strength on large surfaces read as a government portal, not a friendly service.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="overline">03 · Decisions</span>
+      <h2 class="h2">What I changed — and <span class="serif">why</span></h2>
+      <div class="shots">
+        <figure><div class="frame"><img src="img/after-home.jpg" alt="Redesigned home page" loading="lazy"></div><figcaption>After — home: one search, four categories, one featured event. <a class="badge-verified" href="index.html">Open ↗</a></figcaption></figure>
+        <figure><div class="frame"><img src="img/after-catalog.jpg" alt="Redesigned catalog with a map" loading="lazy"></div><figcaption>After — catalog: list and map side by side, clusters per city. <a class="badge-verified" href="catalog.html">Open ↗</a></figcaption></figure>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>Dark globe, three competing CTAs and an ad in the hero.</p></div>
+        <div class="after"><h4>After</h4><p>A light hero with one job: search. Faces of real specialists float around it with their role and city.</p></div>
+        <div class="why"><h4>Why</h4><p>The first screen should answer “is this for me?”. Seeing a lawyer in Valencia and a nail master in Alicante says it faster than any tagline — and people trust faces more than icons.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>One search field for “what”.</p></div>
+        <div class="after"><h4>After</h4><p>Two fields — <i>what</i> and <i>where</i> — plus popular queries as chips (Manicure, TIE renewal…).</p></div>
+        <div class="why"><h4>Why</h4><p>Services are local; without a city the results are useless. Popular chips help people who don't know the right word yet — and show what the platform is for.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>Eight equal categories with glowing 3D icons.</p></div>
+        <div class="after"><h4>After</h4><p>A bento grid: four main categories with photos and counts, plus one “See all” tile.</p></div>
+        <div class="why"><h4>Why</h4><p>Hick's law: fewer equal options means a faster decision. Different tile sizes create a visual hierarchy, and the counts (“1,240 specialists”) double as social proof.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>Cards with long descriptions, tags and emojis; key facts in random places.</p></div>
+        <div class="after"><h4>After</h4><p>One fixed card anatomy: photo → rating & Verified → service → person → distance & price.</p></div>
+        <div class="why"><h4>Why</h4><p>A list is for comparing. When every card has the same structure, the eye jumps between the same spots. “Verified” sits next to the rating because trust is the first question.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>The map lived on the home page as decoration, separate from results.</p></div>
+        <div class="after"><h4>After</h4><p>Catalog with a list and a live map side by side; hovering a card highlights its pin. On mobile — a “Show map” toggle.</p></div>
+        <div class="why"><h4>Why</h4><p>Seeing who's nearby is the core value — even the testimonial in the original design is about it. So the map became a tool for choosing, not a picture. Filters update both the list and the map, and the URL, so results can be shared in a Telegram chat.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>A modal with a four-step stepper and every field visible at once.</p></div>
+        <div class="after"><h4>After</h4><p>A side sheet with three real steps — service, time, details — a progress bar and a live summary with the price.</p></div>
+        <div class="why"><h4>Why</h4><p>One decision per screen lowers the cognitive load. You only see days that have free slots. The summary keeps the price visible all the time, and “pay on the spot, free cancellation” removes the fear of committing.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>Four event carousels and a promo banner.</p></div>
+        <div class="after"><h4>After</h4><p>One featured event with a date, a place, “312 people are going” and a single CTA.</p></div>
+        <div class="why"><h4>Why</h4><p>Carousels hide content: few people click past the first slide. One strong event with social proof gets more RSVPs than four weak ones.</p></div>
+      </div>
+
+      <div class="decision">
+        <div class="before"><h4>Before</h4><p>Blue and yellow on large surfaces; two fonts with small sizes.</p></div>
+        <div class="after"><h4>After</h4><p>A warm off-white base; blue only for actions, yellow only in the logo. Geist for UI, Instrument Serif italic for one accent word per heading.</p></div>
+        <div class="why"><h4>Why</h4><p>When colour means “click here”, people find the button without thinking. The serif accent adds warmth and a human voice, so a minimal interface doesn't feel cold.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="overline">04 · System</span>
+      <h2 class="h2">A small system, <span class="serif">built to grow</span></h2>
+      <p class="lead" style="max-width:640px;margin-top:20px">The same tokens live in Figma as variables and in the code as CSS custom properties — one source of truth for design and development.</p>
+      <div class="tokens">
+        <div class="swatch"><i style="background:#FAFAF7"></i><div><b>Background</b>#FAFAF7</div></div>
+        <div class="swatch"><i style="background:#111111"></i><div><b>Ink</b>#111111</div></div>
+        <div class="swatch"><i style="background:#0057B8"></i><div><b>Accent · actions</b>#0057B8</div></div>
+        <div class="swatch"><i style="background:#EAF1FB"></i><div><b>Accent soft</b>#EAF1FB</div></div>
+        <div class="swatch"><i style="background:#FFD500"></i><div><b>Sun · logo only</b>#FFD500</div></div>
+      </div>
+      <div class="type-spec">
+        <div><span class="display" style="font-size:56px">Display <span class="serif">accent</span></span><span>Geist 500 · 88/88 · −4%</span></div>
+        <div><span class="h2" style="font-size:40px">Heading 2</span><span>Geist 500 · 52/55 · −3%</span></div>
+        <div><span class="h3">Heading 3</span><span>Geist 500 · 22/28</span></div>
+        <div><span class="lead">Body large — calm and readable.</span><span>Geist 400 · 19/28</span></div>
+        <div><span>Body — the default for UI text.</span><span>Geist 400 · 16/24</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="overline">05 · Measuring it</span>
+      <h2 class="h2">How I'd know it <span class="serif">works</span></h2>
+      <div class="cs-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <div class="cs-card"><span class="num">→</span><h3>Search → profile</h3><p>Share of home visits that open a specialist profile.</p></div>
+        <div class="cs-card"><span class="num">✓</span><h3>Booking conversion</h3><p>Profile views that end in a confirmed booking.</p></div>
+        <div class="cs-card"><span class="num">⏱</span><h3>Time to book</h3><p>From landing to confirmation. Target: under two minutes.</p></div>
+        <div class="cs-card"><span class="num">⌖</span><h3>Map usage</h3><p>Bookings that started from a map pin vs. the list.</p></div>
+      </div>
+      <div class="biz" style="margin-top:96px;grid-template-columns:1fr">
+        <div>
+          <h2 class="h2">Try the flow <span class="serif">yourself.</span></h2>
+          <p class="lead">Search, open the map, pick a specialist and book a time — it takes about a minute.</p>
+          <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+            <a class="btn btn-light" href="index.html">Open the prototype</a>
+            <a class="btn btn-outline-light" href="specialist.html?id=mariia-koval">Jump to booking</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

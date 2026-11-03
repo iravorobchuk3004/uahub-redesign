@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230057B8'/%3E%3Cpath d='M0 18h32v5a9 9 0 0 1-9 9H9a9 9 0 0 1-9-9z' fill='%23FFD500'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Find a specialist · UAHUB</title>
+</head>
+<body data-page="catalog">
+<main class="catalog">
+  <section class="catalog-list">
+    <form class="catalog-search" id="catalog-search" role="search">
+      <span data-icon="search"></span>
+      <label class="sr-only" for="q">Search</label>
+      <input id="q" placeholder="Manicure, lawyer, Spanish tutor…" autocomplete="off">
+      <label class="sr-only" for="city">City</label>
+      <select id="city"></select>
+      <button class="btn btn-primary btn-sm" type="submit">Search</button>
+    </form>
+    <div class="filters-row" id="cats" aria-label="Categories"></div>
+    <div class="result-bar">
+      <h1 id="count" aria-live="polite"></h1>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <label class="toggle"><input type="checkbox" id="verified"> Verified only</label>
+        <label class="toggle"><input type="checkbox" id="savedOnly"> Saved</label>
+      </div>
+    </div>
+    <div class="grid-cards" id="results"></div>
+  </section>
+  <aside class="catalog-map" aria-label="Map">
+    <div class="map">
+      <div class="map-canvas" id="catalog-map">
+        <img class="land" src="img/map-spain-white.png" alt="Map of Spain with specialists">
+      </div>
+    </div>
+  </aside>
+  <button class="btn btn-dark view-switch" type="button"><span data-icon="map"></span> Show map</button>
+</main>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
