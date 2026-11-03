@@ -495,3 +495,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   .map-float { left: 12px; right: 12px; bottom: 12px; font-size: 13px; }
 }
 .sheet-foot .sum:empty + .btn, .sheet-foot .sum[style*="none"] + .btn { flex: 1; }
+
+/* Static render for Figma import (?figma) */
+.no-motion *, .no-motion *::before, .no-motion *::after { animation: none !important; transition: none !important; }
+.no-motion .reveal { opacity: 1; transform: none; }

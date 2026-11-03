@@ -3,6 +3,9 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const page = document.body.dataset.page;
+  const qs = new URLSearchParams(location.search);
+  // ?figma — static render for importing into Figma (no scroll reveals or motion)
+  if (qs.has("figma")) document.documentElement.classList.add("no-motion");
 
   /* ---------- Icons ---------- */
   const PATHS = {
@@ -483,6 +486,14 @@
       render();
       setTimeout(() => $("[data-close]", sheet).focus(), 50);
     };
+    // ?book=1..4 opens the booking sheet on a given step (handy for demos and Figma import)
+    const bk = +qs.get("book");
+    if (bk >= 1 && bk <= 4) {
+      const d = DAYS.findIndex((x) => x.times.length);
+      const preset = bk === 1 ? {} : { service: 0, day: d, time: DAYS[d].times[1] || DAYS[d].times[0] };
+      if (bk >= 3) Object.assign(preset, { name: "Olena Hrytsenko", phone: "+34 600 123 456" });
+      setTimeout(() => { open(preset); b.step = bk; render(); }, 0);
+    }
     const close = () => { document.body.classList.remove("is-booking"); sheet.setAttribute("aria-hidden", "true"); };
 
     document.addEventListener("click", (e) => {
