@@ -76,7 +76,7 @@
       </nav>
       <div class="nav-actions">
         <a class="btn btn-ghost hide-m" href="catalog.html?saved=1">${icon("heart")} Saved <span class="saved-count"></span></a>
-        <a class="btn btn-secondary btn-sm hide-m" href="index.html#business">For business</a>
+        <a class="btn btn-secondary btn-sm hide-m" href="business.html" ${page === "business" ? 'aria-current="page"' : ""}>For business</a>
         <a class="btn btn-dark btn-sm hide-m" href="#" data-signin>Sign in</a>
         <button class="nav-burger" aria-label="Menu" aria-expanded="false">${icon("menu")}</button>
       </div>
@@ -87,7 +87,7 @@
     <a href="catalog.html?cat=food">Businesses</a>
     <a href="index.html#events">Events</a>
     <a href="catalog.html?saved=1">Saved <span class="saved-count"></span></a>
-    <a href="index.html#business">For business</a>
+    <a href="business.html">For business</a>
     <a href="case-study.html">Case study</a>
   </div>`;
   document.body.insertAdjacentHTML("afterbegin", navHTML);
@@ -116,7 +116,7 @@
           <p style="max-width:300px;margin-top:16px">Ukrainian specialists, businesses and events across Spain — in one place, in your language.</p>
         </div>
         <div><h4>Explore</h4><ul><li><a href="catalog.html">All specialists</a></li><li><a href="catalog.html?cat=beauty">Beauty</a></li><li><a href="catalog.html?cat=legal">Legal</a></li><li><a href="index.html#events">Events</a></li></ul></div>
-        <div><h4>For business</h4><ul><li><a href="index.html#business">List your business</a></li><li><a href="index.html#business">Pricing</a></li><li><a href="index.html#business">Verification</a></li></ul></div>
+        <div><h4>For business</h4><ul><li><a href="business.html">List your business</a></li><li><a href="business.html#pricing">Pricing</a></li><li><a href="business.html#how">Verification</a></li><li><a href="business.html#faq">FAQ</a></li></ul></div>
         <div><h4>Project</h4><ul><li><a href="case-study.html">Case study</a></li><li><a href="https://uahub.world" target="_blank" rel="noopener">Original site ↗</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© 2026 UAHUB · Redesign concept by Iryna Vorobchuk</span><span>Prototype — names and businesses are fictional</span></div>
@@ -536,6 +536,29 @@
     sheet.addEventListener("input", (e) => {
       if (e.target.name) b[e.target.name] = e.target.value;
       e.target.closest(".field")?.classList.remove("err");
+    });
+  }
+
+  /* ================= BUSINESS ================= */
+  if (page === "business") {
+    $$("[data-billing]").forEach((btn) =>
+      btn.addEventListener("click", () => {
+        const y = btn.dataset.billing === "year";
+        $$("[data-billing]").forEach((x) => x.setAttribute("aria-pressed", x === btn));
+        $$("[data-m]").forEach((el) => (el.textContent = y ? el.dataset.y : el.dataset.m));
+      })
+    );
+    $$("[data-plan]").forEach((a) => a.addEventListener("click", () => ($("#j-plan").value = a.dataset.plan)));
+    const form = $("#join-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = form.biz.value.trim();
+      $("#j-name").classList.toggle("err", !name);
+      $("#j-phone").classList.toggle("err", form.phone.value.replace(/\D/g, "").length < 6);
+      if ($(".field.err", form)) return $(".field.err input", form).focus();
+      form.innerHTML = `<div class="done" style="padding:24px 0"><div class="ok">${icon("check")}</div>
+        <h3 class="h2" style="font-size:32px">Welcome, <span class="serif">${esc(name)}</span></h3>
+        <p class="muted" style="max-width:320px;margin:12px auto 0">We'll send a link to finish your ${esc(form.plan.value)} profile to WhatsApp within an hour.</p></div>`;
     });
   }
 

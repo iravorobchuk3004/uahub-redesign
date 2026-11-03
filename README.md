@@ -5,7 +5,8 @@ A clickable prototype of a redesigned UAHUB: a marketplace of Ukrainian speciali
 - `index.html` — home
 - `catalog.html` — search, filters and map
 - `specialist.html?id=…` — profile with a 3-step booking flow
-- `case-study.html` — audit, decisions and reasoning
+- `business.html` — for business: features, pricing, FAQ, sign-up
+- `case-study.html` — live site vs. redesign, decisions and reasoning
 
 Plain HTML, CSS and JavaScript, no build step. Run locally with `python3 -m http.server`.
 
