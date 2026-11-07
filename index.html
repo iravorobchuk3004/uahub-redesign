@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body data-page="home">
 <main>
@@ -22,10 +22,10 @@
     <div class="wrap">
       <!-- Filled from data.js: hover or focus opens a mini profile, click goes to the full one -->
       <div class="hero-people">
-        <a class="float-person" data-person="iryna-melnyk" style="left:-10px;top:40px"></a>
-        <a class="float-person" data-person="mariia-koval" style="left:30px;top:330px"></a>
-        <a class="float-person right" data-person="maksym-tkachenko" style="right:-10px;top:60px"></a>
-        <a class="float-person right" data-person="yulia-romanenko" style="right:30px;top:340px"></a>
+        <a class="float-person" data-person="iryna-melnyk" style="left:-10px;top:40px" href="specialist.html?id=iryna-melnyk"><span class="fp-head"><img class="fp-avatar" src="img/avatar-1.jpg" alt=""><span><b>Iryna</b><span class="fp-sub">Lawyer · Valencia</span></span></span></a>
+        <a class="float-person" data-person="mariia-koval" style="left:30px;top:330px" href="specialist.html?id=mariia-koval"><span class="fp-head"><img class="fp-avatar" src="img/avatar-2.jpg" alt=""><span><b>Mariia</b><span class="fp-sub">Nails · Alicante</span></span></span></a>
+        <a class="float-person right" data-person="maksym-tkachenko" style="right:-10px;top:60px" href="specialist.html?id=maksym-tkachenko"><span class="fp-head"><img class="fp-avatar" src="img/avatar-4.jpg" alt=""><span><b>Maksym</b><span class="fp-sub">Photographer · Alicante</span></span></span></a>
+        <a class="float-person right" data-person="yulia-romanenko" style="right:30px;top:340px" href="specialist.html?id=yulia-romanenko"><span class="fp-head"><img class="fp-avatar" src="img/avatar-5.jpg" alt=""><span><b>Yulia</b><span class="fp-sub">Yoga · Barcelona</span></span></span></a>
       </div>
       <span class="eyebrow"><b>New</b> 4,200 verified Ukrainian businesses</span>
       <h1 class="display">Your people,<br><span class="serif">wherever</span> you are.</h1>
@@ -201,8 +201,8 @@
   </section>
 </main>
 <footer data-footer></footer>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="data.js?v=7"></script>
+<script src="app.js?v=7"></script>
 <script>
   document.getElementById("rsvp").addEventListener("click", (e) => {
     e.currentTarget.textContent = "You're going ✓";
