@@ -9,4 +9,4 @@ A clickable prototype of a redesigned UAHUB: a marketplace of Ukrainian speciali
 
 Plain HTML, CSS and JavaScript, no build step. Run locally with `python3 -m http.server`.
 
-Names and businesses are fictional. Design: Iryna Vorobchuk, 2026.
+Names and businesses are fictional. Gallery photos: Unsplash (free licence). Design: Iryna Vorobchuk, 2026.

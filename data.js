@@ -24,14 +24,12 @@ window.UAHUB = (() => {
     { id: "food", label: "Food & cafés" },
   ];
 
-  const GALLERY_NAILS = ["nails-salon", "gallery-chrome", "gallery-red", "gallery-denim", "gallery-mint"];
-
   const SPECIALISTS = [
     {
       id: "mariia-koval", name: "Mariia Koval", title: "Gel manicure & nail art", cat: "beauty",
       city: "Alicante", area: "Centro", km: 0.8, rating: 4.9, reviews: 128, price: 25, unit: "",
       img: "nails-salon", avatar: "avatar-2", verified: true, years: 6, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish", "English"], gallery: GALLERY_NAILS,
+      langs: ["Ukrainian", "Spanish", "English"], gallery: ["g/mariia-koval-1", "g/mariia-koval-2", "g/mariia-koval-3", "g/mariia-koval-4"],
       about: "Certified nail master from Kharkiv, in Alicante since 2022. Clean, minimal designs that last three weeks — and a studio where you can finally relax in your own language.",
       services: [
         { name: "Manicure + gel polish", mins: 90, price: 35 },
@@ -44,7 +42,7 @@ window.UAHUB = (() => {
       id: "anna-bondar", name: "Anna Bondar", title: "Psychologist — adaptation & anxiety", cat: "health",
       city: "Alicante", area: "Online or San Blas", km: 1.6, rating: 5.0, reviews: 64, price: 55, unit: "/ session",
       img: "psychologist", avatar: "avatar-3", verified: true, years: 9, replies: "within 3 hours",
-      langs: ["Ukrainian", "English"], gallery: ["psychologist", "yoga", "community"],
+      langs: ["Ukrainian", "English"], gallery: ["g/anna-bondar-1", "g/anna-bondar-2", "g/anna-bondar-3", "g/anna-bondar-4"],
       about: "Clinical psychologist working with people who moved abroad: adaptation, burnout, anxiety and family relationships. Sessions in person or online.",
       services: [
         { name: "First consultation", mins: 50, price: 40 },
@@ -56,7 +54,7 @@ window.UAHUB = (() => {
       id: "olena-savchuk", name: "Olena Savchuk", title: "Apartment & after-rent cleaning", cat: "home",
       city: "Alicante", area: "Playa San Juan", km: 2.4, rating: 4.7, reviews: 39, price: 15, unit: "/ hour",
       img: "cleaning", avatar: "avatar-7", verified: false, years: 3, replies: "same day",
-      langs: ["Ukrainian", "Russian"], gallery: ["cleaning"],
+      langs: ["Ukrainian", "Russian"], gallery: ["g/olena-savchuk-1", "g/olena-savchuk-2", "g/olena-savchuk-3", "g/olena-savchuk-4"],
       about: "Regular and deep cleaning, end-of-lease cleaning so you get your deposit back. Own eco products.",
       services: [
         { name: "Regular cleaning, 3 hours", mins: 180, price: 45 },
@@ -68,7 +66,7 @@ window.UAHUB = (() => {
       id: "maksym-tkachenko", name: "Maksym Tkachenko", title: "Family & golden-hour photo sessions", cat: "photo",
       city: "Alicante", area: "Coast & old town", km: 3.1, rating: 4.9, reviews: 87, price: 120, unit: "",
       img: "photographer", avatar: "avatar-4", verified: true, years: 8, replies: "within 2 hours",
-      langs: ["Ukrainian", "Spanish", "English"], gallery: ["photographer", "community", "fair"],
+      langs: ["Ukrainian", "Spanish", "English"], gallery: ["g/maksym-tkachenko-1", "g/maksym-tkachenko-2", "g/maksym-tkachenko-3", "g/maksym-tkachenko-4"],
       about: "Relaxed outdoor sessions on the Costa Blanca. 40+ edited photos in a week, printed album on request.",
       services: [
         { name: "Mini session, 30 min", mins: 30, price: 120 },
@@ -80,7 +78,7 @@ window.UAHUB = (() => {
       id: "iryna-melnyk", name: "Iryna Melnyk", title: "Immigration lawyer — NIE, TIE, residency", cat: "legal",
       city: "Valencia", area: "Ruzafa", km: 1.2, rating: 4.9, reviews: 212, price: 60, unit: "",
       img: "lawyer", avatar: "avatar-1", verified: true, years: 12, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish"], gallery: ["lawyer", "meeting"],
+      langs: ["Ukrainian", "Spanish"], gallery: ["g/iryna-melnyk-1", "g/iryna-melnyk-2", "g/iryna-melnyk-3", "g/iryna-melnyk-4"],
       about: "Spanish-licensed abogada (ICAV). Temporary protection renewals, residency, family reunification and homologation of diplomas — explained in plain Ukrainian.",
       services: [
         { name: "Consultation", mins: 45, price: 60 },
@@ -92,7 +90,7 @@ window.UAHUB = (() => {
       id: "sofia-lysenko", name: "Sofia Lysenko", title: "Bridal & evening makeup", cat: "beauty",
       city: "Valencia", area: "El Carmen", km: 2.0, rating: 4.8, reviews: 76, price: 45, unit: "",
       img: "makeup", avatar: "avatar-8", verified: true, years: 7, replies: "within 2 hours",
-      langs: ["Ukrainian", "Spanish"], gallery: ["makeup", "nails-salon"],
+      langs: ["Ukrainian", "Spanish"], gallery: ["g/sofia-lysenko-1", "g/sofia-lysenko-2", "g/sofia-lysenko-3", "g/sofia-lysenko-4"],
       about: "Makeup that looks like you on your best day. Studio in El Carmen or on location.",
       services: [
         { name: "Evening makeup", mins: 60, price: 45 },
@@ -103,7 +101,7 @@ window.UAHUB = (() => {
       id: "daria-moroz", name: "Daria Moroz", title: "Spanish for adults & kids, A1–B2", cat: "learning",
       city: "Alicante", area: "Online or Benalúa", km: 1.1, rating: 5.0, reviews: 58, price: 20, unit: "/ lesson",
       img: "tutor", avatar: "avatar-6", verified: true, years: 5, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish", "English"], gallery: ["tutor", "meeting"],
+      langs: ["Ukrainian", "Spanish", "English"], gallery: ["g/daria-moroz-1", "g/daria-moroz-2", "g/daria-moroz-3", "g/daria-moroz-4"],
       about: "DELE examiner-trained teacher. Lessons built around real life here: the doctor, the bank, the school chat.",
       services: [
         { name: "Trial lesson", mins: 30, price: 10 },
@@ -115,7 +113,7 @@ window.UAHUB = (() => {
       id: "yulia-romanenko", name: "Yulia Romanenko", title: "Yoga & mobility classes", cat: "health",
       city: "Barcelona", area: "Gràcia", km: 0.9, rating: 4.9, reviews: 101, price: 12, unit: "/ class",
       img: "yoga", avatar: "avatar-5", verified: true, years: 10, replies: "within 4 hours",
-      langs: ["Ukrainian", "English"], gallery: ["yoga", "community"],
+      langs: ["Ukrainian", "English"], gallery: ["g/yulia-romanenko-1", "g/yulia-romanenko-2", "g/yulia-romanenko-3", "g/yulia-romanenko-4"],
       about: "Small-group hatha and mobility classes in Gràcia, plus a Sunday class on the beach.",
       services: [
         { name: "Group class", mins: 60, price: 12 },
@@ -126,7 +124,7 @@ window.UAHUB = (() => {
       id: "taras-hnatiuk", name: "Taras Hnatiuk", title: "Personal training & nutrition", cat: "health",
       city: "Madrid", area: "Chamberí", km: 1.4, rating: 4.8, reviews: 44, price: 35, unit: "/ session",
       img: "trainer", avatar: null, verified: true, years: 6, replies: "within 2 hours",
-      langs: ["Ukrainian", "Spanish"], gallery: ["trainer"],
+      langs: ["Ukrainian", "Spanish"], gallery: ["g/taras-hnatiuk-1", "g/taras-hnatiuk-2", "g/taras-hnatiuk-3", "g/taras-hnatiuk-4"],
       about: "Strength training for beginners, with a simple meal plan you can actually shop for in Mercadona.",
       services: [
         { name: "Personal session", mins: 60, price: 35 },
@@ -137,7 +135,7 @@ window.UAHUB = (() => {
       id: "viktoriia-nails", name: "Viktoriia Shevchuk", title: "Nail studio — chrome & minimal", cat: "beauty",
       city: "Málaga", area: "Soho", km: 0.6, rating: 4.9, reviews: 93, price: 30, unit: "",
       img: "nails-denim", avatar: null, verified: true, years: 4, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish"], gallery: ["nails-denim", "gallery-chrome", "gallery-mint"],
+      langs: ["Ukrainian", "Spanish"], gallery: ["g/viktoriia-nails-1", "g/viktoriia-nails-2", "g/viktoriia-nails-3", "g/viktoriia-nails-4"],
       about: "Chrome, milky and soft-square sets in the heart of Soho.",
       services: [
         { name: "Manicure + gel polish", mins: 90, price: 30 },
@@ -148,7 +146,7 @@ window.UAHUB = (() => {
       id: "kyiv-cafe", name: "Kyiv Café Valencia", title: "Ukrainian kitchen & bakery", cat: "food",
       city: "Valencia", area: "Benimaclet", km: 2.6, rating: 4.8, reviews: 311, price: 12, unit: "avg. bill",
       img: "cafe", avatar: null, verified: true, years: 3, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish", "English"], gallery: ["cafe", "fair"],
+      langs: ["Ukrainian", "Spanish", "English"], gallery: ["g/kyiv-cafe-1", "g/kyiv-cafe-2", "g/kyiv-cafe-3", "g/kyiv-cafe-4"],
       about: "Borscht, varenyky and syrnyky like at home. Table booking and catering for events.",
       services: [
         { name: "Table for 2", mins: 90, price: 0 },
@@ -159,7 +157,7 @@ window.UAHUB = (() => {
       id: "andrii-business", name: "Andrii Kravets", title: "Autónomo setup & accounting", cat: "legal",
       city: "Madrid", area: "Online", km: 0, rating: 4.9, reviews: 67, price: 50, unit: "/ month",
       img: "meeting", avatar: null, verified: true, years: 11, replies: "within 1 hour",
-      langs: ["Ukrainian", "Spanish"], gallery: ["meeting", "lawyer"],
+      langs: ["Ukrainian", "Spanish"], gallery: ["g/andrii-business-1", "g/andrii-business-2", "g/andrii-business-3", "g/andrii-business-4"],
       about: "Register as autónomo, quarterly taxes and the yearly renta — without surprises from Hacienda.",
       services: [
         { name: "Free 20-min call", mins: 20, price: 0 },

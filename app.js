@@ -117,7 +117,7 @@
         <div><h4>For business</h4><ul><li><a href="business.html">List your business</a></li><li><a href="business.html#pricing">Pricing</a></li><li><a href="business.html#how">Verification</a></li><li><a href="business.html#faq">FAQ</a></li></ul></div>
         <div><h4>Project</h4><ul><li><a href="https://uahub.world" target="_blank" rel="noopener">Original site ↗</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 UAHUB · Redesign concept by Iryna Vorobchuk</span><span>Prototype — names and businesses are fictional</span></div>
+      <div class="footer-bottom"><span>© 2026 UAHUB · Redesign concept by Iryna Vorobchuk</span><span>Prototype — names and businesses are fictional · Photos: Unsplash</span></div>
     </div>`;
   }
 
