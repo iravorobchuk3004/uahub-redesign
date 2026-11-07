@@ -199,6 +199,34 @@
         </span></span>`;
     });
 
+    // Magnetic pull: each person leans gently toward the cursor when it comes close,
+    // and stays still once hovered so the card never runs away from the mouse.
+    const people = $$("[data-person]");
+    if (people.length && matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches && !qs.has("figma")) {
+      const RANGE = 380, PULL = 40;
+      let raf = 0, mouse = null;
+      const update = () => {
+        raf = 0;
+        people.forEach((el) => {
+          if (el.matches(":hover")) return;
+          let dx = 0, dy = 0;
+          if (mouse) {
+            const r = el.getBoundingClientRect();
+            const cx = r.left + r.width / 2 - (parseFloat(el.style.getPropertyValue("--mx")) || 0);
+            const cy = r.top + r.height / 2 - (parseFloat(el.style.getPropertyValue("--my")) || 0);
+            const vx = mouse.x - cx, vy = mouse.y - cy, d = Math.hypot(vx, vy);
+            if (d < RANGE && d > 0) { const k = (1 - d / RANGE) ** 1.5 * PULL; dx = (vx / d) * k; dy = (vy / d) * k; }
+          }
+          el.style.setProperty("--mx", dx.toFixed(1) + "px");
+          el.style.setProperty("--my", dy.toFixed(1) + "px");
+        });
+      };
+      const queue = () => { if (!raf) raf = requestAnimationFrame(update); };
+      const hero = $(".hero");
+      hero.addEventListener("pointermove", (e) => { mouse = { x: e.clientX, y: e.clientY }; queue(); });
+      hero.addEventListener("pointerleave", () => { mouse = null; queue(); });
+    }
+
     const nearGrid = $("#near-grid");
     const near = SPECIALISTS.filter((s) => s.city === "Alicante");
     const renderNear = (cat) => {
