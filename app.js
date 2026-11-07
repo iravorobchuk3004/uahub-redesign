@@ -72,7 +72,6 @@
         <a href="catalog.html" ${page === "catalog" ? 'aria-current="page"' : ""}>Find a specialist</a>
         <a href="catalog.html?cat=food">Businesses</a>
         <a href="index.html#events">Events</a>
-        <a href="case-study.html" ${page === "case" ? 'aria-current="page"' : ""}>Case study</a>
       </nav>
       <div class="nav-actions">
         <a class="btn btn-ghost hide-m" href="catalog.html?saved=1">${icon("heart")} Saved <span class="saved-count"></span></a>
@@ -88,7 +87,6 @@
     <a href="index.html#events">Events</a>
     <a href="catalog.html?saved=1">Saved <span class="saved-count"></span></a>
     <a href="business.html">For business</a>
-    <a href="case-study.html">Case study</a>
   </div>`;
   document.body.insertAdjacentHTML("afterbegin", navHTML);
   const burger = $(".nav-burger");
@@ -117,7 +115,7 @@
         </div>
         <div><h4>Explore</h4><ul><li><a href="catalog.html">All specialists</a></li><li><a href="catalog.html?cat=beauty">Beauty</a></li><li><a href="catalog.html?cat=legal">Legal</a></li><li><a href="index.html#events">Events</a></li></ul></div>
         <div><h4>For business</h4><ul><li><a href="business.html">List your business</a></li><li><a href="business.html#pricing">Pricing</a></li><li><a href="business.html#how">Verification</a></li><li><a href="business.html#faq">FAQ</a></li></ul></div>
-        <div><h4>Project</h4><ul><li><a href="case-study.html">Case study</a></li><li><a href="https://uahub.world" target="_blank" rel="noopener">Original site ↗</a></li></ul></div>
+        <div><h4>Project</h4><ul><li><a href="https://uahub.world" target="_blank" rel="noopener">Original site ↗</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© 2026 UAHUB · Redesign concept by Iryna Vorobchuk</span><span>Prototype — names and businesses are fictional</span></div>
     </div>`;
@@ -182,6 +180,23 @@
       e.preventDefault();
       const q = $("#hero-q").value.trim();
       location.href = `catalog.html?city=${encodeURIComponent(citySel.value)}${q ? "&q=" + encodeURIComponent(q) : ""}`;
+    });
+
+    // Hero people: pill → mini profile on hover/focus, click opens the full profile
+    const short = { "iryna-melnyk": "Lawyer", "mariia-koval": "Nails", "maksym-tkachenko": "Photographer", "yulia-romanenko": "Yoga" };
+    $$("[data-person]").forEach((el) => {
+      const s = byId(el.dataset.person);
+      const money = (x) => (x.price === 0 ? "Free" : `${x.from ? "from " : ""}€${x.price}`);
+      el.href = `specialist.html?id=${s.id}`;
+      el.setAttribute("aria-label", `${s.name}, ${s.title}, ${s.city}. Open profile`);
+      el.innerHTML = `
+        <span class="fp-head">${avatar(s, "fp-avatar")}<span><b>${s.name.split(" ")[0]}<i class="fp-last"> ${s.name.split(" ").slice(1).join(" ")}</i></b><span class="fp-sub">${short[s.id]} · ${s.city}</span></span></span>
+        <span class="fp-more"><span class="fp-inner">
+          <span class="fp-title">${esc(s.title)}</span>
+          <span class="fp-meta"><span class="rating">${icon("star", "sm fill")}${s.rating.toFixed(1)} <span>(${s.reviews})</span></span>${s.verified ? `<span class="badge badge-verified">${icon("verified", "sm")}Verified</span>` : ""}</span>
+          <span class="fp-services">${s.services.slice(0, 3).map((x) => `<span><span>${esc(x.name)}</span><b>${money(x)}</b></span>`).join("")}</span>
+          <span class="fp-foot"><span class="muted">Replies ${s.replies}</span><span class="fp-cta">View profile ${icon("arrow", "sm")}</span></span>
+        </span></span>`;
     });
 
     const nearGrid = $("#near-grid");
