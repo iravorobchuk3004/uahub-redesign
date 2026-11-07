@@ -174,7 +174,7 @@ window.UAHUB = (() => {
     { name: "Svitlana R.", city: "San Vicente", text: "Booked for a Saturday through the site — got a confirmation right away.", stars: 4, when: "2 months ago" },
   ];
 
-  const img = (name) => `img/${name}.jpg`;
+  const img = (name) => `img/${name}.jpg?v=2`;
   const byId = (id) => SPECIALISTS.find((s) => s.id === id);
   const catLabel = (id) => (CATEGORIES.find((c) => c.id === id) || {}).label || "";
 
