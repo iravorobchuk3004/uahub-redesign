@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <title>UAHUB for business — pricing and features</title>
   <meta name="description" content="Get a profile, online booking and a verified badge. Reach Ukrainian clients in your city. Free to start.">
 </head>
@@ -57,31 +57,78 @@
     </div>
   </div>
 
-  <!-- How it works -->
+  <!-- How it works: a timeline, not cards -->
   <section class="section" id="how">
-    <div class="wrap">
-      <div class="section-head reveal"><h2 class="h2">Live in <span class="serif">three steps</span></h2></div>
-      <div class="steps reveal">
-        <div class="step"><span class="num">1</span><h3>Create your profile</h3><p>Add photos, services and prices. We prefill categories and translate your description into Spanish and English.</p></div>
-        <div class="step"><span class="num">2</span><h3>Get verified</h3><p>Send your NIE/CIF or autónomo registration. Our team checks it within 24 hours and adds the Verified badge.</p></div>
-        <div class="step"><span class="num">3</span><h3>Take bookings</h3><p>Clients pick a free slot in your calendar. You confirm in one tap — they get a reminder the day before.</p></div>
+    <div class="wrap how">
+      <div class="how-intro reveal">
+        <span class="overline">How it works</span>
+        <h2 class="h2" style="margin-top:12px">Live in <span class="serif">three steps</span></h2>
+        <p class="lead muted">Most businesses get their first booking the same week they sign up.</p>
+        <a class="btn btn-dark" href="#join">Start free <span data-icon="arrow"></span></a>
       </div>
+      <ol class="timeline reveal">
+        <li><span class="t-num">1</span><div><span class="t-time">5 minutes</span><h3>Create your profile</h3><p>Add photos, services and prices. We prefill categories and translate your description into Spanish and English.</p></div></li>
+        <li><span class="t-num">2</span><div><span class="t-time">Within 24 hours</span><h3>Get verified</h3><p>Send your NIE/CIF or autónomo registration. Our team checks it and adds the Verified badge.</p></div></li>
+        <li><span class="t-num">3</span><div><span class="t-time">From day one</span><h3>Take bookings</h3><p>Clients pick a free slot in your calendar. You confirm in one tap — they get a reminder the day before.</p></div></li>
+      </ol>
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Features: bento, each block shows the thing instead of an icon -->
   <section class="section">
     <div class="wrap">
       <div class="section-head reveal">
         <div><h2 class="h2">Everything you need <span class="serif">to grow</span></h2><p class="muted">Not just an ad — a small booking system for your business.</p></div>
       </div>
-      <div class="features reveal">
-        <div class="feature"><span class="ic"><span data-icon="calendar"></span></span><h3>Online booking</h3><p>Your calendar with working hours and breaks. No more “are you free on Saturday?” in Telegram.</p></div>
-        <div class="feature"><span class="ic"><span data-icon="verified"></span></span><h3>Verified badge</h3><p>The first thing clients check before they book. We review your documents within 24 hours.</p></div>
-        <div class="feature"><span class="ic"><span data-icon="map"></span></span><h3>On the map</h3><p>Your face on the map of your city — people choose who's nearby.</p></div>
-        <div class="feature"><span class="ic"><span data-icon="star"></span></span><h3>Real reviews</h3><p>Only clients who actually booked can leave a review. You can reply to each one.</p></div>
-        <div class="feature"><span class="ic"><span data-icon="chat"></span></span><h3>Messages & reminders</h3><p>Booking confirmations go to WhatsApp or Telegram — wherever your clients are.</p></div>
-        <div class="feature"><span class="ic"><span data-icon="sparkle"></span></span><h3>Simple analytics</h3><p>Views, bookings and where clients came from. Understand what works in a minute.</p></div>
+      <div class="fbento reveal">
+        <div class="fb fb-booking">
+          <div class="fb-visual" aria-hidden="true">
+            <div class="mini-cal">
+              <div class="mini-days"><span>Mon<b>2</b></span><span>Tue<b>3</b></span><span class="on">Wed<b>4</b></span><span>Thu<b>5</b></span><span>Fri<b>6</b></span></div>
+              <div class="mini-slots"><span>09:00</span><span class="off">10:00</span><span class="on">12:30</span><span>14:00</span><span>16:30</span><span class="off">18:00</span></div>
+            </div>
+          </div>
+          <h3>Online booking</h3><p>Your calendar with working hours and breaks. No more “are you free on Saturday?” in Telegram.</p>
+        </div>
+        <div class="fb fb-map">
+          <div class="fb-visual" aria-hidden="true">
+            <div class="mini-map">
+              <img src="img/map-spain-white.png" alt="">
+              <img class="mm-pin" style="left:44%;top:43%" src="img/avatar-4.jpg" alt="">
+              <img class="mm-pin" style="left:74%;top:50%" src="img/avatar-1.jpg" alt="">
+              <img class="mm-pin me" style="left:70%;top:70%" src="img/avatar-2.jpg" alt="">
+              <img class="mm-pin" style="left:91%;top:31%" src="img/avatar-5.jpg" alt="">
+            </div>
+          </div>
+          <h3>On the map</h3><p>Your face on the map of your city — people choose who's nearby.</p>
+        </div>
+        <div class="fb fb-verified">
+          <div class="fb-visual" aria-hidden="true">
+            <span class="v-seal"><span data-icon="verified"></span></span>
+            <span class="v-pill"><span data-icon="check"></span> Documents checked</span>
+          </div>
+          <h3>Verified badge</h3><p>The first thing clients check before they book. We review your documents within 24 hours.</p>
+        </div>
+        <div class="fb fb-reviews">
+          <div class="fb-visual" aria-hidden="true">
+            <div class="mini-review"><span class="mr-stars">★★★★★</span><p>“Careful work and a calm atmosphere. Coming back.”</p><small>Kateryna P. · booked via UAHUB</small></div>
+          </div>
+          <h3>Real reviews</h3><p>Only clients who actually booked can leave one. You can reply to each.</p>
+        </div>
+        <div class="fb fb-chat">
+          <div class="fb-visual" aria-hidden="true">
+            <div class="bubble in">Reminder: manicure tomorrow at 12:30 with Mariia. Reply 1 to confirm.</div>
+            <div class="bubble out">1 ✓</div>
+          </div>
+          <h3>Messages &amp; reminders</h3><p>Confirmations go to WhatsApp or Telegram — wherever your clients are.</p>
+        </div>
+        <div class="fb fb-stats">
+          <div class="fb-visual" aria-hidden="true">
+            <div class="mini-stat"><b>+32%</b><span>profile views</span></div>
+            <div class="mini-bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:78%"></i><i class="on" style="height:100%"></i></div>
+          </div>
+          <h3>Simple analytics</h3><p>Views, bookings and where clients came from — in a minute.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -219,7 +266,7 @@
   </section>
 </main>
 <footer data-footer></footer>
-<script src="data.js?v=9"></script>
-<script src="app.js?v=9"></script>
+<script src="data.js?v=10"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>
